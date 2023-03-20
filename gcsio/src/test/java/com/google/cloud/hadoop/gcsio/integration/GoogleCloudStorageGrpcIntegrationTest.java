@@ -55,7 +55,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
-import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -115,7 +114,7 @@ public class GoogleCloudStorageGrpcIntegrationTest {
     rawStorage.createBucket(BUCKET_NAME);
   }
 
-  @AfterClass
+  // @AfterClass
   public static void cleanupBuckets() throws IOException {
     GoogleCloudStorage rawStorage =
         new GoogleCloudStorageImpl(
